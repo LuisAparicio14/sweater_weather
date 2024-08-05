@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe BookService do
   it "can get books with the specific location given" do
     json_response_1 = File.read("spec/fixtures/book_search.json")
-    stub_request(:get, "https://openlibrary.org/search.json?query=Denver,%20CO").
+    stub_request(:get, "https://openlibrary.org/search.json?q=Denver,%20CO").
       with(
         headers: {
           'Accept'=>'*/*',

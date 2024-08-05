@@ -1,7 +1,6 @@
 class BookService
   def self.get_books_for(location)
-    # query = URI.encode("q=#{location}")
-    get_url("/search.json", query: location)
+    get_url("/search.json", q: location)
   end
 
   def self.get_url(url, params)
