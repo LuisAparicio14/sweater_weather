@@ -10,14 +10,6 @@ RSpec.describe ForecastService do
           location: 'Denver, CO'
         }
       ).to_return(status: 200, body: json)
-    # stub_request(:get, "http://api.weatherapi.com/geocoding/v1/address?key&location=Denver,%20CO").
-    #   with(
-    #     headers: {
-    #     'Accept'=>'*/*',
-    #     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    #     'User-Agent'=>'Faraday v2.10.1'
-    #     }).
-    #   to_return(status: 200, body: json, headers: {})
 
     coord = ForecastService.get_coordinates("Denver, CO")
 

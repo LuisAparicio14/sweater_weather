@@ -3,14 +3,7 @@ require "rails_helper"
 RSpec.describe "get forecast end point" do
   it "can get forecast for a city" do
     json = File.read("spec/fixtures/denver_coord.json")
-    # stub_request(:get, "https://www.mapquestapi.com/geocoding/v1/address").
-    #   with(
-    #     query: {
-    #         key: Rails.application.credentials.map_quest[:api_key],
-    #         location: 'Denver, CO'
-    #       }
-    #     ).
-    #   to_return(status: 200, body: json)
+
     stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key&location=Denver,%20CO").
       with(
         headers: {
@@ -22,17 +15,7 @@ RSpec.describe "get forecast end point" do
 
     coord = {lat: 39.74001, lng: -104.99202}
     json_response = File.read("spec/fixtures/denver_forecast.json")
-    # stub_request(:get, "https://api.weatherapi.com/v1/forecast.json").
-    #   with(
-    #     query: {
-    #         key: Rails.application.credentials.weather[:api_key],
-    #         q: "#{coord[:lat]},#{coord[:lng]}",
-    #         days: 5,
-    #         aqi: "no",
-    #         alerts: "no"
-    #       }
-    #     ).
-    #   to_return(status: 200, body: json_response)
+    
     stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key&query=39.74001,-104.99202").
       with(
         headers: {
