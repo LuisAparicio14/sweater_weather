@@ -39,7 +39,7 @@ class Forecast
 
   def set_hourly_weather(data)
     hourly_weather = []
-    hourly_weather.each do |hour_data|
+    data.each do |hour_data|
       hour = {}
       hour[:time] = Time.parse(hour_data[:time]).to_fs(:time)
       hour[:temperature] = hour_data[:temp_f]
