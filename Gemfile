@@ -34,6 +34,8 @@ gem "bootsnap", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
+gem "jsonapi-serializer"
+gem "faraday"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -44,9 +46,6 @@ group :development, :test do
   gem "pry"
   gem "simplecov"
   gem 'shoulda-matchers'
-end
-
-group :test do
   gem "webmock"
   gem "vcr"
 end
@@ -54,7 +53,5 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 

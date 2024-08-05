@@ -5,6 +5,9 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'simplecov'
+SimpleCov.start
+require 'webmock/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -62,4 +65,21 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  # config.fixture_paths = [Rails.root.join('spec/fixtures')]
 end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
+end
+
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.configure_rspec_metadata!
+#   config.ignore_localhost = true
+#   config.filter_sensitive_data('WEATHER_KEY') { Rails.application.credentials.weather[:key] }
+#   config.filter_sensitive_data('MAP_QUEST_KEY') { Rails.application.credentials.map_quest[:key] }
+# end
