@@ -10,7 +10,7 @@ class ForecastService
 
   def self.mapquest_conn
     Faraday.new("http://www.mapquestapi.com") do |faraday|
-      faraday.params["key"] = Rails.application.credentials.map_quest[:api_key]
+      faraday.params["key"] = Rails.application.credentials.map_quest[:key]
     end
   end
 
@@ -31,7 +31,7 @@ class ForecastService
   
   def self.weather_conn
     Faraday.new("http://api.weatherapi.com") do |faraday|
-      faraday.params["key"]=Rails.application.credentials.weather[:api_key]
+      faraday.params["key"]=Rails.application.credentials.weather[:key]
     end
   end
 end
