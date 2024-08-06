@@ -5,7 +5,7 @@ RSpec.describe Forecast do
     json = File.read("spec/fixtures/denver_forecast.json")
     data = JSON.parse(json, symbolize_names: true)
     forecast = Forecast.new(data)
-
+    # require 'pry' ; binding.pry
     expect(forecast).to be_a(Forecast)
     expect(forecast.id).to eq(nil)
     expect(forecast.current_weather).to be_a(Hash)

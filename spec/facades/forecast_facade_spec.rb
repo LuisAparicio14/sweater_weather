@@ -6,7 +6,7 @@ RSpec.describe ForecastFacade do
     stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address").
       with(
         query: {
-          key: Rails.application.credentials.map_quest[:api_key],
+          key: Rails.application.credentials.map_quest[:key],
           location: 'Denver, CO'
         }
       ).to_return(status: 200, body: json)
@@ -22,7 +22,7 @@ RSpec.describe ForecastFacade do
   it "can get weather" do
     coord = {lat: 39.74001, lng: -104.99202}
     json = File.read("spec/fixtures/denver_forecast.json")
-    stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key&query=39.74001,-104.99202").
+    stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key=#{Rails.application.credentials.weather[:key]}&query=39.74001,-104.99202").
       with(
         headers: {
         'Accept'=>'*/*',

@@ -4,7 +4,7 @@ RSpec.describe "get forecast end point" do
   it "can get forecast for a city" do
     json = File.read("spec/fixtures/denver_coord.json")
 
-    stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key&location=Denver,%20CO").
+    stub_request(:get, "http://www.mapquestapi.com/geocoding/v1/address?key=#{Rails.application.credentials.map_quest[:key]}&location=Denver,%20CO").
       with(
         headers: {
           'Accept'=>'*/*',
@@ -16,7 +16,7 @@ RSpec.describe "get forecast end point" do
     coord = {lat: 39.74001, lng: -104.99202}
     json_response = File.read("spec/fixtures/denver_forecast.json")
     
-    stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key&query=39.74001,-104.99202").
+    stub_request(:get, "http://api.weatherapi.com/v1/forecast.json?alerts=no&aqi=no&days=5&key=#{Rails.application.credentials.weather[:key]}&query=39.74001,-104.99202").
       with(
         headers: {
           'Accept'=>'*/*',
@@ -45,10 +45,10 @@ RSpec.describe "get forecast end point" do
     expect(daily_weather.size).to eq(5)
     expect(daily_weather).to all(include(:date, :sunrise, :sunset, :max_temp, :min_temp, :condition, :icon))
     
-    # hourly_weather = forecast[:attributes][:hourly_weather]
-    # expect(hourly_weather).to be_an(Array)
     # require 'pry' ; binding.pry
-    # expect(hourly_weather.size).to eq(24)
-    # expect(hourly_weather).to all(include(:time, :temperature, :conditions, :icon))
+    hourly_weather = forecast[:attributes][:hourly_weather]
+    expect(hourly_weather).to be_an(Array)
+    expect(hourly_weather.size).to eq(24)
+    expect(hourly_weather).to all(include(:time, :temperature, :conditions, :icon))
   end
 end
