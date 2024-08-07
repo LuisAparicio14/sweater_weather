@@ -1,4 +1,8 @@
 # Sweater Weather
+MapQuest: [API](https://developer.mapquest.com/documentation/api/geocoding/)
+
+Weather: [API](https://www.weatherapi.com/)
+
 ## Development setup
 
 First, clone the repository to your computer

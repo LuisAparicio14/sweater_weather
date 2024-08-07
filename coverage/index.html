@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-08-06T21:51:52-04:00">2024-08-06T21:51:52-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-08-07T11:20:56-04:00">2024-08-07T11:20:56-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -128,7 +128,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#de0377ad69baec55e0df1a6a03e2bcb767a2682f" class="src_link" title="app/facades/forecast_facade.rb">app/facades/forecast_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
@@ -293,7 +293,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8e8c48e9b2aa942c8a56c916250d88ba09325bfc" class="src_link" title="spec/requests/api/v1/forecast_spec.rb">spec/requests/api/v1/forecast_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">54</td>
+            <td class="cell--number">53</td>
             <td class="cell--number">27</td>
             <td class="cell--number">27</td>
             <td class="cell--number">0</td>
@@ -315,7 +315,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3fd6f87b199a0ea983c334804c5ee8a1e07b479f" class="src_link" title="spec/requests/api/v1/session_log_in_spec.rb">spec/requests/api/v1/session_log_in_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">102</td>
+            <td class="cell--number">103</td>
             <td class="cell--number">55</td>
             <td class="cell--number">55</td>
             <td class="cell--number">0</td>
@@ -326,7 +326,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#89e6472f2c46daf4a62aaee3c79b96e70e9c1fc2" class="src_link" title="spec/requests/api/v1/user_registration_spec.rb">spec/requests/api/v1/user_registration_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">107</td>
+            <td class="cell--number">106</td>
             <td class="cell--number">55</td>
             <td class="cell--number">55</td>
             <td class="cell--number">0</td>
@@ -743,7 +743,7 @@
 
             
 
-            <code class="ruby">      render json: { errors:[{ status: 422, detail: &quot;Invalid credentials&quot; }] }, status: :unprocessable_entity</code>
+            <code class="ruby">      render json: { errors:[{ status: 401, detail: &quot;Invalid credentials&quot; }] }, status: :unauthorized</code>
           </li>
         </div>
       
@@ -1157,7 +1157,7 @@
 
             
 
-            <code class="ruby">      render json: { errors:[{ status: 422, detail: exception.message }] }, status: :unprocessable_entity</code>
+            <code class="ruby">      render json: { errors:[{ status: 401, detail: exception.message }] }, status: :unauthorized</code>
           </li>
         </div>
       
@@ -1281,18 +1281,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">    # require &#39;pry&#39; ; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
+          <li class="covered" data-hits="2" data-linenumber="4">
             <span class="hits">2</span>
             
 
@@ -1303,7 +1292,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -1314,7 +1303,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -1325,7 +1314,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
@@ -1336,7 +1325,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
+          <li class="covered" data-hits="2" data-linenumber="8">
             <span class="hits">2</span>
             
 
@@ -1347,7 +1336,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
+          <li class="covered" data-hits="2" data-linenumber="9">
             <span class="hits">2</span>
             
 
@@ -1358,7 +1347,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -1369,7 +1358,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -5486,18 +5475,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
-            
-
-            <code class="ruby">    # require &#39;pry&#39; ; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
+          <li class="covered" data-hits="1" data-linenumber="48">
             <span class="hits">1</span>
             
 
@@ -5508,7 +5486,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
+          <li class="covered" data-hits="1" data-linenumber="49">
             <span class="hits">1</span>
             
 
@@ -5519,7 +5497,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="50">
             <span class="hits">1</span>
             
 
@@ -5530,7 +5508,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="51">
             <span class="hits">1</span>
             
 
@@ -5541,7 +5519,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -5552,7 +5530,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -7550,51 +7528,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(response.status).to eq(422)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="58">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    errors = parsed_response[:errors]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -7605,13 +7539,57 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(errors[0][:status]).to eq(422)</code>
+            <code class="ruby">    expect(response.status).to eq(401)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    errors = parsed_response[:errors]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">    # require &#39;pry&#39; ; binding.pry</code>
           </li>
         </div>
       
@@ -7622,18 +7600,18 @@
 
             
 
-            <code class="ruby">    expect(errors[0][:detail]).to eq(&quot;Invalid credentials&quot;)</code>
+            <code class="ruby">    expect(errors[0][:status]).to eq(401)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(errors[0][:detail]).to eq(&quot;Invalid credentials&quot;)</code>
           </li>
         </div>
       
@@ -7644,18 +7622,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="65">
+            
             
 
             
 
-            <code class="ruby">  it &quot;valid user email(sad path)&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7666,12 +7644,23 @@
 
             
 
+            <code class="ruby">  it &quot;valid user email(sad path)&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    headers = {&quot;Content_Type&quot;: &quot;application/json&quot;, &quot;Accept&quot;: &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 
@@ -7682,7 +7671,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
+          <li class="covered" data-hits="1" data-linenumber="69">
             <span class="hits">1</span>
             
 
@@ -7693,7 +7682,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
+          <li class="never" data-hits="" data-linenumber="70">
             
             
 
@@ -7704,7 +7693,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="70">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -7715,7 +7704,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
@@ -7726,7 +7715,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="72">
+          <li class="covered" data-hits="1" data-linenumber="73">
             <span class="hits">1</span>
             
 
@@ -7737,24 +7726,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="never" data-hits="" data-linenumber="74">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="74">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(response).to_not be_successful</code>
           </li>
         </div>
       
@@ -7765,29 +7743,29 @@
 
             
 
+            <code class="ruby">    expect(response).to_not be_successful</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(response.status).to eq(404)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
+          <li class="never" data-hits="" data-linenumber="77">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="77">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
@@ -7798,29 +7776,29 @@
 
             
 
+            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="79">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    errors = parsed_response[:errors]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="79">
+          <li class="never" data-hits="" data-linenumber="80">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="80">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(errors[0][:status]).to eq(404)</code>
           </li>
         </div>
       
@@ -7831,18 +7809,18 @@
 
             
 
-            <code class="ruby">    expect(errors[0][:detail]).to eq(&quot;Couldn&#39;t find User&quot;)</code>
+            <code class="ruby">    expect(errors[0][:status]).to eq(404)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="82">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(errors[0][:detail]).to eq(&quot;Couldn&#39;t find User&quot;)</code>
           </li>
         </div>
       
@@ -7853,18 +7831,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="84">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="84">
+            
             
 
             
 
-            <code class="ruby">  it &quot;valid password(sad path)&quot; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7875,12 +7853,23 @@
 
             
 
+            <code class="ruby">  it &quot;valid password(sad path)&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    headers = {&quot;Content_Type&quot;: &quot;application/json&quot;, &quot;Accept&quot;: &quot;application/json&quot;}</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="86">
+          <li class="never" data-hits="" data-linenumber="87">
             
             
 
@@ -7891,7 +7880,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="87">
+          <li class="covered" data-hits="1" data-linenumber="88">
             <span class="hits">1</span>
             
 
@@ -7902,7 +7891,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
+          <li class="never" data-hits="" data-linenumber="89">
             
             
 
@@ -7913,7 +7902,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="90">
             
             
 
@@ -7924,7 +7913,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="90">
+          <li class="never" data-hits="" data-linenumber="91">
             
             
 
@@ -7935,7 +7924,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="91">
+          <li class="covered" data-hits="1" data-linenumber="92">
             <span class="hits">1</span>
             
 
@@ -7946,24 +7935,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="never" data-hits="" data-linenumber="93">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="93">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(response).to_not be_successful</code>
           </li>
         </div>
       
@@ -7974,29 +7952,29 @@
 
             
 
-            <code class="ruby">    expect(response.status).to eq(422)</code>
+            <code class="ruby">    expect(response).to_not be_successful</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="95">
+          <li class="covered" data-hits="1" data-linenumber="95">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(response.status).to eq(401)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="96">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
           </li>
         </div>
       
@@ -8007,12 +7985,23 @@
 
             
 
+            <code class="ruby">    parsed_response = JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="98">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    errors = parsed_response[:errors]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="98">
+          <li class="never" data-hits="" data-linenumber="99">
             
             
 
@@ -8023,18 +8012,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="99">
+          <li class="covered" data-hits="1" data-linenumber="100">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(errors[0][:status]).to eq(422)</code>
+            <code class="ruby">    expect(errors[0][:status]).to eq(401)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="100">
+          <li class="covered" data-hits="1" data-linenumber="101">
             <span class="hits">1</span>
             
 
@@ -8045,7 +8034,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="never" data-hits="" data-linenumber="102">
             
             
 
@@ -8056,7 +8045,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="102">
+          <li class="never" data-hits="" data-linenumber="103">
             
             
 
@@ -9154,18 +9143,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="97">
-            
-            
-
-            
-
-            <code class="ruby">    # require &#39;pry&#39; ; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="98">
+          <li class="covered" data-hits="1" data-linenumber="97">
             <span class="hits">1</span>
             
 
@@ -9176,18 +9154,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="99">
+          <li class="covered" data-hits="1" data-linenumber="98">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(response.status).to eq(422)</code>
+            <code class="ruby">    expect(response.status).to eq(401)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="100">
+          <li class="never" data-hits="" data-linenumber="99">
             
             
 
@@ -9198,7 +9176,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="101">
+          <li class="covered" data-hits="1" data-linenumber="100">
             <span class="hits">1</span>
             
 
@@ -9209,7 +9187,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="102">
+          <li class="covered" data-hits="1" data-linenumber="101">
             <span class="hits">1</span>
             
 
@@ -9220,7 +9198,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="103">
+          <li class="never" data-hits="" data-linenumber="102">
             
             
 
@@ -9231,18 +9209,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="104">
+          <li class="covered" data-hits="1" data-linenumber="103">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    expect(errors[0][:status]).to eq(422)</code>
+            <code class="ruby">    expect(errors[0][:status]).to eq(401)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="105">
+          <li class="covered" data-hits="1" data-linenumber="104">
             <span class="hits">1</span>
             
 
@@ -9253,7 +9231,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="106">
+          <li class="never" data-hits="" data-linenumber="105">
             
             
 
@@ -9264,7 +9242,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="107">
+          <li class="never" data-hits="" data-linenumber="106">
             
             
 

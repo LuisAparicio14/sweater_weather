@@ -1,7 +1,6 @@
 class ForecastFacade
   def self.get_coordinates(location)
     data = ForecastService.get_coordinates(location)
-    # require 'pry' ; binding.pry
     coord = data[:results].first[:locations].first[:latLng]
   end
 

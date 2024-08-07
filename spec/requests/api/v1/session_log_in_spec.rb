@@ -53,12 +53,13 @@ RSpec.describe "POST /api/v1/sessions", type: :request do
     post "/api/v1/sessions", params: body, headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(422)
+    # require 'pry' ; binding.pry
+    expect(response.status).to eq(401)
 
     parsed_response = JSON.parse(response.body, symbolize_names: true)
     errors = parsed_response[:errors]
     # require 'pry' ; binding.pry
-    expect(errors[0][:status]).to eq(422)
+    expect(errors[0][:status]).to eq(401)
     expect(errors[0][:detail]).to eq("Invalid credentials")
   end
 
@@ -91,12 +92,12 @@ RSpec.describe "POST /api/v1/sessions", type: :request do
     post "/api/v1/sessions", params: body, headers: headers
 
     expect(response).to_not be_successful
-    expect(response.status).to eq(422)
+    expect(response.status).to eq(401)
 
     parsed_response = JSON.parse(response.body, symbolize_names: true)
     errors = parsed_response[:errors]
 
-    expect(errors[0][:status]).to eq(422)
+    expect(errors[0][:status]).to eq(401)
     expect(errors[0][:detail]).to eq("Invalid credentials")
   end
 end

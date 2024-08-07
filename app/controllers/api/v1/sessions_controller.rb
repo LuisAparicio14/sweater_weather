@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
     if user&.authenticate(params[:password])
       render json: UsersSerializer.new(user), status: :ok
     else
-      render json: { errors:[{ status: 422, detail: "Invalid credentials" }] }, status: :unprocessable_entity
+      render json: { errors:[{ status: 401, detail: "Invalid credentials" }] }, status: :unauthorized
     end
   end
 end

@@ -94,14 +94,13 @@ RSpec.describe "User Registration API" do
     expect(response).to be_successful
     
     post "/api/v1/users", params: body, headers: headers
-    # require 'pry' ; binding.pry
     expect(response).to_not be_successful
-    expect(response.status).to eq(422)
+    expect(response.status).to eq(401)
 
     parsed_response = JSON.parse(response.body, symbolize_names: true)
     errors = parsed_response[:errors]
 
-    expect(errors[0][:status]).to eq(422)
+    expect(errors[0][:status]).to eq(401)
     expect(errors[0][:detail]).to eq("Validation failed: Email has already been taken")
   end
 end

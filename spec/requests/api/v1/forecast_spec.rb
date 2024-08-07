@@ -45,7 +45,6 @@ RSpec.describe "get forecast end point" do
     expect(daily_weather.size).to eq(5)
     expect(daily_weather).to all(include(:date, :sunrise, :sunset, :max_temp, :min_temp, :condition, :icon))
     
-    # require 'pry' ; binding.pry
     hourly_weather = forecast[:attributes][:hourly_weather]
     expect(hourly_weather).to be_an(Array)
     expect(hourly_weather.size).to eq(24)
