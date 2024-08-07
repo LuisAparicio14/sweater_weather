@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get "/forecast", to: "forecasts#show"
       resources :users, only: [:create]
       resources :sessions, only: :create
-      get "/book_search", to: "book_search#index"
+      resources :road_trip, only: :create
     end
   end
 end
